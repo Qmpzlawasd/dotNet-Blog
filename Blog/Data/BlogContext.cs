@@ -14,9 +14,7 @@ namespace Blog.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Writer> Writers { get; set; }
 
-        public BlogContext(DbContextOptions options) : base(options)
-        {
-        }
+        public BlogContext(DbContextOptions<BlogContext> options) : base(options){}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +22,7 @@ namespace Blog.Data
             modelBuilder.Entity<Comment>().HasKey(a => new { a.UserId, a.BlogPostId });
             modelBuilder.Entity<Tag>().HasKey(tagObj => new { tagObj.BlogPostId, tagObj.CategoryId });
             modelBuilder.Entity<Like>().HasKey(likeObj => new { likeObj.UserId, likeObj.BlogPostId });
+
             // somehow set fk on these tables :crycatto:
             modelBuilder.Entity<Category>().HasMany(cat => cat.Tags).WithOne(tag => tag.Category)
                 .HasForeignKey(tag => tag.CategoryId);
@@ -45,9 +44,8 @@ namespace Blog.Data
                 .HasOne(writer => writer.Writer)
                 .WithOne(a => a.User).HasForeignKey<Writer>(a => a.UserId);
 
-            modelBuilder.Entity<BlogPost>().HasOne(cat => cat.Writer).WithMany(tag => tag.BlogPosts);
-
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Writer>().HasMany(cat => cat.BlogPosts).WithOne(tag => tag.Writer)
+            .HasForeignKey(a=>a.WriterId);
         }
     }
 }

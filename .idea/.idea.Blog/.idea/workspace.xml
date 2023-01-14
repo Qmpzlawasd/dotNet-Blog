@@ -7,39 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/Comment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/Like.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/Writer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/UserDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Blog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Blog.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20221227113941_InintDatabase.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20221227113941_InintDatabase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Interaction.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Tag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Writer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Writer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/apphost" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,23 +62,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "idea.background.editor": "/home/stefan/Pictures/sabia.jpg,0,scale,center",
+    "settings.editor.selected.configurable": "preferences.keymap"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/stefan/.local/share/Symbols/src&quot;
+    "rider.external.source.directories": [
+      "/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/home/stefan/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Blog: http">
     <configuration name="Blog" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Blog/Blog.csproj" />
@@ -153,12 +146,20 @@
       <workItem from="1672160640778" duration="8167000" />
       <workItem from="1672169074928" duration="614000" />
       <workItem from="1673686898618" duration="12323000" />
+      <workItem from="1673704438515" duration="91000" />
+      <workItem from="1673704552249" duration="6020000" />
+      <workItem from="1673715058799" duration="4403000" />
     </task>
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

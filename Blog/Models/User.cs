@@ -4,10 +4,12 @@ namespace Blog.Models;
 
 public class User : BaseEntity
 {
+    //dto component
     public string Username { get; set; }
-    public bool IsAdmin{ get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
+    
+    public bool IsAdmin{ get; set; }
     public string? Sex { get; set; }
     
     public virtual Writer? Writer{ get; set; }
