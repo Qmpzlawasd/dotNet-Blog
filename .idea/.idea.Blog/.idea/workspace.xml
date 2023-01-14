@@ -6,16 +6,70 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/Comment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/Like.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/Writer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20221227113941_InintDatabase.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20221227113941_InintDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Interaction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Tag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a620e7f5-77be-427c-a825-1c92613ea731" />
+        <option name="url" value="https://github.com/Qmpzlawasd/dotNet-Blog.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2JUheWMhQA1PNBprIuYTLZJoy5E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -93,9 +147,16 @@
       <option name="presentableId" value="Default" />
       <updated>1672138664474</updated>
       <workItem from="1672138665582" duration="5294000" />
+      <workItem from="1672145659638" duration="1868000" />
+      <workItem from="1672152883513" duration="41000" />
+      <workItem from="1672152943767" duration="2008000" />
+      <workItem from="1672160640778" duration="8167000" />
+      <workItem from="1672169074928" duration="614000" />
+      <workItem from="1673686898618" duration="12323000" />
     </task>
     <servers />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
