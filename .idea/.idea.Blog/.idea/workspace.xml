@@ -6,19 +6,20 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/UserDTO.cs" afterDir="false" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="done database">
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121090339_tava.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121090339_tava.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Blog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Blog.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Tag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Tag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/Like.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Like.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/Writer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Writer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
@@ -62,28 +63,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "idea.background.editor": "/home/stefan/Pictures/sabia.jpg,0,scale,center",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;idea.background.editor&quot;: &quot;/home/stefan/Pictures/sabia.jpg,0,scale,center&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
     ],
-    "rider.external.source.directories": [
-      "/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/home/stefan/.local/share/Symbols/src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/home/stefan/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/home/stefan/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Blog: http">
     <configuration name="Blog" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Blog/Blog.csproj" />
@@ -148,15 +149,44 @@
       <workItem from="1673686898618" duration="12323000" />
       <workItem from="1673704438515" duration="91000" />
       <workItem from="1673704552249" duration="6020000" />
-      <workItem from="1673715058799" duration="4403000" />
+      <workItem from="1673715058799" duration="7041000" />
+      <workItem from="1673788726281" duration="2984000" />
+      <workItem from="1673792432497" duration="4402000" />
+      <workItem from="1673797026785" duration="417000" />
+      <workItem from="1673797691335" duration="536000" />
+      <workItem from="1673798508257" duration="626000" />
+      <workItem from="1674236741716" duration="1945000" />
+      <workItem from="1674286656755" duration="1953000" />
+      <workItem from="1674290423388" duration="1820000" />
     </task>
+    <task id="LOCAL-00001" summary="done database">
+      <created>1673719751130</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673719751130</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="done database" />
+    <option name="LAST_COMMIT_MESSAGE" value="done database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

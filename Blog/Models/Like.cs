@@ -10,5 +10,5 @@ public class Like
     public Guid UserId { get; set; }
 
     public virtual BlogPost BlogPost { get; set; }
-    public virtual User User { get; set; }
+    public virtual AppUser AppUser { get; set; }
 }

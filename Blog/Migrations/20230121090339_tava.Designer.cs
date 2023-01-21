@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blog.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20230114165859_InitDatabase")]
-    partial class InitDatabase
+    [Migration("20230121090339_tava")]
+    partial class tava
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,14 +25,51 @@ namespace Blog.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Blog.Models.AppUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DateCreated")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateDeleted")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppUsers");
+                });
+
             modelBuilder.Entity("Blog.Models.BlogPost", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
+                    b.Property<DateTime?>("DateCreated")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DateDeleted")
@@ -67,8 +104,8 @@ namespace Blog.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
+                    b.Property<DateTime?>("DateCreated")
+                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DateDeleted")
@@ -109,7 +146,7 @@ namespace Blog.Migrations
 
                     b.HasIndex("BlogPostId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Blog.Models.Like", b =>
@@ -124,7 +161,7 @@ namespace Blog.Migrations
 
                     b.HasIndex("BlogPostId");
 
-                    b.ToTable("Like");
+                    b.ToTable("Likes");
                 });
 
             modelBuilder.Entity("Blog.Models.Tag", b =>
@@ -139,44 +176,7 @@ namespace Blog.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Tag");
-                });
-
-            modelBuilder.Entity("Blog.Models.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateCreated")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDeleted")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsAdmin")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sex")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Blog.Models.Writer", b =>
@@ -211,18 +211,18 @@ namespace Blog.Migrations
                     b.HasOne("Blog.Models.BlogPost", "BlogPost")
                         .WithMany("Comments")
                         .HasForeignKey("BlogPostId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Blog.Models.User", "User")
+                    b.HasOne("Blog.Models.AppUser", "AppUser")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BlogPost");
+                    b.Navigation("AppUser");
 
-                    b.Navigation("User");
+                    b.Navigation("BlogPost");
                 });
 
             modelBuilder.Entity("Blog.Models.Like", b =>
@@ -230,18 +230,18 @@ namespace Blog.Migrations
                     b.HasOne("Blog.Models.BlogPost", "BlogPost")
                         .WithMany("Likes")
                         .HasForeignKey("BlogPostId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Blog.Models.User", "User")
+                    b.HasOne("Blog.Models.AppUser", "AppUser")
                         .WithMany("Likes")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BlogPost");
+                    b.Navigation("AppUser");
 
-                    b.Navigation("User");
+                    b.Navigation("BlogPost");
                 });
 
             modelBuilder.Entity("Blog.Models.Tag", b =>
@@ -265,13 +265,22 @@ namespace Blog.Migrations
 
             modelBuilder.Entity("Blog.Models.Writer", b =>
                 {
-                    b.HasOne("Blog.Models.User", "User")
+                    b.HasOne("Blog.Models.AppUser", "AppUser")
                         .WithOne("Writer")
                         .HasForeignKey("Blog.Models.Writer", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Blog.Models.AppUser", b =>
+                {
+                    b.Navigation("Comments");
+
+                    b.Navigation("Likes");
+
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("Blog.Models.BlogPost", b =>
@@ -286,16 +295,6 @@ namespace Blog.Migrations
             modelBuilder.Entity("Blog.Models.Category", b =>
                 {
                     b.Navigation("Tags");
-                });
-
-            modelBuilder.Entity("Blog.Models.User", b =>
-                {
-                    b.Navigation("Comments");
-
-                    b.Navigation("Likes");
-
-                    b.Navigation("Writer")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Blog.Models.Writer", b =>

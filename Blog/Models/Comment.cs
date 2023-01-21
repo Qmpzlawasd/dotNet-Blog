@@ -9,7 +9,7 @@ public class Comment
 {
     public Guid UserId { get; set; }
     public Guid BlogPostId { get; set; }
-    public virtual User User { get; set; }
+    public virtual AppUser AppUser { get; set; }
     public virtual BlogPost BlogPost { get; set; }
     // attr
     public string Text { get; set; }

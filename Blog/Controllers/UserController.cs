@@ -9,7 +9,6 @@ namespace Blog.Controllers;
 [Route("api/[controller]")]
 [ApiController]
 public class UserController : Controller
-
 {
     private BlogContext _BlogContext;
 
@@ -21,20 +20,20 @@ public class UserController : Controller
     [HttpGet]
     public async Task<IActionResult> GetUsers()
     {
-        return Ok(await _BlogContext.Users.ToListAsync());
+        return Ok(await _BlogContext.AppUsers.ToListAsync());
     }
 
     [HttpGet("getUserData{id}")]
     public async Task<IActionResult> getUserData([FromRoute] Guid identif)
     {
-        var user = _BlogContext.Users.FirstOrDefault(userObj => userObj.Id == identif);
+        var user = _BlogContext.AppUsers.FirstOrDefault(userObj => userObj.Id == identif);
         return Ok(user);
     }
 
     [HttpPost("CreateUser")]
     public async Task<IActionResult> Create(UserDTO givenUser)
     {
-        var newUser = new User();
+        var newUser = new AppUser();
         newUser.Username = givenUser.Username;
         newUser.Email = givenUser.Email;
         newUser.Password = givenUser.Password;

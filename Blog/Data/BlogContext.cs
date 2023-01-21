@@ -9,12 +9,12 @@ namespace Blog.Data
         public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Comment> Like { get; set; }
-        public DbSet<Comment> Tag { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Like> Likes { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Writer> Writers { get; set; }
 
-        public BlogContext(DbContextOptions<BlogContext> options) : base(options){}
+        public BlogContext(DbContextOptions options) : base(options){}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,24 +28,25 @@ namespace Blog.Data
                 .HasForeignKey(tag => tag.CategoryId);
 
             modelBuilder.Entity<BlogPost>().HasMany(cat => cat.Comments).WithOne(tag => tag.BlogPost)
-                .HasForeignKey(tag => tag.BlogPostId);
+                .HasForeignKey(tag => tag.BlogPostId).OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<BlogPost>().HasMany(cat => cat.Likes).WithOne(tag => tag.BlogPost)
-                .HasForeignKey(tag => tag.BlogPostId);
+                .HasForeignKey(tag => tag.BlogPostId).OnDelete(DeleteBehavior.NoAction);;
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<AppUser>()
                 .HasMany(writer => writer.Likes)
-                .WithOne(a => a.User).HasForeignKey(a => a.UserId);
-            modelBuilder.Entity<User>()
+                .WithOne(a => a.AppUser).HasForeignKey(a => a.UserId);
+            modelBuilder.Entity<AppUser>()
                 .HasMany(writer => writer.Comments)
-                .WithOne(a => a.User).HasForeignKey(a => a.UserId);
+                .WithOne(a => a.AppUser).HasForeignKey(a => a.UserId);
 
             // do rest 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<AppUser>()
                 .HasOne(writer => writer.Writer)
-                .WithOne(a => a.User).HasForeignKey<Writer>(a => a.UserId);
+                .WithOne(a => a.AppUser).HasForeignKey<Writer>(a => a.UserId);
 
             modelBuilder.Entity<Writer>().HasMany(cat => cat.BlogPosts).WithOne(tag => tag.Writer)
             .HasForeignKey(a=>a.WriterId);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

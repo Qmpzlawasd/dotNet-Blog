@@ -6,7 +6,7 @@ public class Writer
 {
     [Key]
     public Guid UserId { get; set; }
-    public virtual User User { get; set; }
+    public virtual AppUser AppUser { get; set; }
     
     public int BlogPostsWritten { get; set; }
     public string? PhoneNumber { get; set; }
