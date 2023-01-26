@@ -12,7 +12,8 @@ public class Comment
     public virtual AppUser AppUser { get; set; }
     public virtual BlogPost BlogPost { get; set; }
     // attr
+    [StringLength(500)]
     public string Text { get; set; }
     public int  LikeCount { get; set; }
-    public DateTime DatePosted { get; set; }
+    public DateTime DatePosted { get; set; } = DateTime.Now.ToUniversalTime();
 }

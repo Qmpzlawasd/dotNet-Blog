@@ -1,8 +1,6 @@
-using Blog.Data;
-using Blog.Models;
 using Blog.Models.DTOs;
+using Blog.Services.User;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Blog.Controllers;
 
@@ -10,35 +8,29 @@ namespace Blog.Controllers;
 [ApiController]
 public class UserController : Controller
 {
-    private BlogContext _BlogContext;
+    private readonly IUserService _userService;
 
-    public UserController(BlogContext context)
+    public UserController(IUserService userService)
     {
-        _BlogContext = context;
+        _userService= userService;
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetUsers()
+    [HttpGet("getUserData/{id}")]
+    public async ActionResult<AppUserDTO> getUserData([FromRoute] Guid id)
     {
-        return Ok(await _BlogContext.AppUsers.ToListAsync());
+        var outp = _userService.GetById(id);
+        var response = new UserResponseDTO
+        {
+            Username  = outp.
+            Email = outp.
+            Sex = outp.
+        };
+        return Ok();
     }
-
-    [HttpGet("getUserData{id}")]
-    public async Task<IActionResult> getUserData([FromRoute] Guid identif)
-    {
-        var user = _BlogContext.AppUsers.FirstOrDefault(userObj => userObj.Id == identif);
-        return Ok(user);
-    }
-
+    
     [HttpPost("CreateUser")]
-    public async Task<IActionResult> Create(UserDTO givenUser)
+    public async Task<IActionResult> Create(AppUserDTO givenUser)
     {
-        var newUser = new AppUser();
-        newUser.Username = givenUser.Username;
-        newUser.Email = givenUser.Email;
-        newUser.Password = givenUser.Password;
-        await _BlogContext.AddAsync(newUser);
-        await _BlogContext.SaveChangesAsync();
-        return Ok(newUser);
+        return Ok();
     }
 }

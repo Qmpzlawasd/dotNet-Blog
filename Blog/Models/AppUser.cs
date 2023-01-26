@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Blog.Models.Base;
 
 namespace Blog.Models;
@@ -5,6 +6,7 @@ namespace Blog.Models;
 public class AppUser : BaseEntity
 {
     //dto component
+    [StringLength(30)]
     public string Username { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }

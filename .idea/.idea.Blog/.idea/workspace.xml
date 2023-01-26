@@ -6,22 +6,35 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="done database">
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121090339_tava.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121090339_tava.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/dataSources/418e9682-eeb7-41da-a16d-246fb47fbfee.xml" afterDir="false" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="make final database, hopefully">
+      <change afterPath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121092130_make_default.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121092130_make_default.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121103334_time.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121103334_time.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/BlogPostDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/CategoryDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/AppUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/IAppUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/Tag/ITagService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/Tag/TagService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Blog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Blog.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Data/BlogContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/20230114165859_InitDatabase.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Comment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Like.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Like.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Writer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Writer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/DTOs/UserDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/AppUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -51,6 +64,10 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de449bf1d030cdafcfe5e0dcd865573dbc103861f920f39d99a4dc848fb4fb0/ManualResetEventSlim.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -72,7 +89,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;idea.background.editor&quot;: &quot;/home/stefan/Pictures/sabia.jpg,0,scale,center&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -157,7 +174,15 @@
       <workItem from="1673798508257" duration="626000" />
       <workItem from="1674236741716" duration="1945000" />
       <workItem from="1674286656755" duration="1953000" />
-      <workItem from="1674290423388" duration="1820000" />
+      <workItem from="1674290423388" duration="3216000" />
+      <workItem from="1674297124930" duration="1294000" />
+      <workItem from="1674304567391" duration="5353000" />
+      <workItem from="1674374119591" duration="703000" />
+      <workItem from="1674394804653" duration="4706000" />
+      <workItem from="1674410332876" duration="3542000" />
+      <workItem from="1674465469681" duration="6654000" />
+      <workItem from="1674474593327" duration="739000" />
+      <workItem from="1674742602828" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="done database">
       <created>1673719751130</created>
@@ -166,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673719751130</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="make final database, hopefully">
+      <created>1674292345069</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674292345069</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -186,7 +218,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="done database" />
-    <option name="LAST_COMMIT_MESSAGE" value="done database" />
+    <MESSAGE value="make final database, hopefully" />
+    <option name="LAST_COMMIT_MESSAGE" value="make final database, hopefully" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
