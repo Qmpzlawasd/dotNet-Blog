@@ -4,7 +4,7 @@ namespace Blog.Repositories.GenericRepository;
 public interface IGenericRepository<TEntity> where TEntity : BaseEntity
 {
     //Get all data
-    Task<List<TEntity>> GetAll();
+    IAsyncEnumerable<TEntity> GetAll();
     IQueryable<TEntity> GetAllAsQueryable();
 
     //Create

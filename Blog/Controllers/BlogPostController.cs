@@ -18,12 +18,12 @@ public class BlogPostController : Controller
     public async Task<IActionResult> Delete([FromRoute] Guid blogId)
     {
         return Ok();
-    }    
-    [HttpGet("getAll")]
-    public async IAsyncEnumerable<BlogPost> GetAll()
-    {
-        return _blogPostService.GetAll();
     }
+    // [HttpGet("getAll")]
+    // public async IAsyncEnumerable<BlogPost> GetAll()
+    // {
+    //     return _blogPostService.GetAll();
+    // }
     [HttpGet("getBlogPostComments/{blogId}")]
     public async Task<IActionResult> GetBlogPostComments([FromRoute] Guid blogId)
     {

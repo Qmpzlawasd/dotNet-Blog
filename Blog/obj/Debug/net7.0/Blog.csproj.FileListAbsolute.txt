@@ -74,3 +74,4 @@
 /home/stefan/RiderProjects/Blog/Blog/obj/Debug/net7.0/Blog.pdb
 /home/stefan/RiderProjects/Blog/Blog/obj/Debug/net7.0/Blog.genruntimeconfig.cache
 /home/stefan/RiderProjects/Blog/Blog/obj/Debug/net7.0/ref/Blog.dll
+/home/stefan/RiderProjects/Blog/Blog/bin/Debug/net7.0/BCrypt.Net-Core.dll

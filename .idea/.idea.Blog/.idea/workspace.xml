@@ -6,42 +6,54 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="make final database, hopefully">
-      <change afterPath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121092130_make_default.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121092130_make_default.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121103334_time.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Migrations/20230121103334_time.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/BlogPostDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/CategoryDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/AppUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/IAppUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/Tag/ITagService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/Tag/TagService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" afterDir="false" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="implement repo and service">
+      <change afterPath="$PROJECT_DIR$/Blog/Controllers/AuthenticateController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/AppSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/JwtToken/IJwtUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/JwtToken/JwtUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/ServiceExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserResponseDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/BlogPostRepositoy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/IBlogPostRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/CategoryRepository/CategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/CategoryRepository/ICategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Repositories/UnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/BCrypt.Net-Core.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Blog.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Blog.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Migrations/BlogContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Base/IBaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/BlogPost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/Comment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/DTOs/UserDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/AppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/DTOs/AppUserDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/DTOs/BlogPostDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/DTOs/BlogPostDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/AppUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/AppUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/IAppUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/AppUserRepository/IAppUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/IGenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/IGenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/Tag/TagService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/Tag/TagService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Blog.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +84,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2JUheWMhQA1PNBprIuYTLZJoy5E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -89,7 +104,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;idea.background.editor&quot;: &quot;/home/stefan/Pictures/sabia.jpg,0,scale,center&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -102,6 +117,11 @@
     ]
   }
 }</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="asd" />
+    </option>
+  </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Blog: http">
     <configuration name="Blog" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Blog/Blog.csproj" />
@@ -182,7 +202,10 @@
       <workItem from="1674410332876" duration="3542000" />
       <workItem from="1674465469681" duration="6654000" />
       <workItem from="1674474593327" duration="739000" />
-      <workItem from="1674742602828" duration="697000" />
+      <workItem from="1674742602828" duration="14211000" />
+      <workItem from="1674892228012" duration="1622000" />
+      <workItem from="1674979233198" duration="8442000" />
+      <workItem from="1675068437789" duration="4093000" />
     </task>
     <task id="LOCAL-00001" summary="done database">
       <created>1673719751130</created>
@@ -198,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674292345069</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement repo and service">
+      <created>1674743426142</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674743426142</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -219,7 +249,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="done database" />
     <MESSAGE value="make final database, hopefully" />
-    <option name="LAST_COMMIT_MESSAGE" value="make final database, hopefully" />
+    <MESSAGE value="implement repo and service" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement repo and service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YAJE/lXdb58AgM0yvIGfEN7MUn+AmmwanFNzYOIxbWssFvs9qcbFtriGKFDu5hP2x7GD6uGaHz23YIzwaAqyVg==",
+  "dgSpecHash": "r6PR8kCSzLhO2Jj71RVuBaY43J4hJ1qKbUzPZ/pDHZYq+BBZKpTQh+shLn/c3AbGCtsvodWf7qctnTvf3DvnWA==",
   "success": true,
   "projectFilePath": "/home/stefan/RiderProjects/Blog/Blog/Blog.csproj",
   "expectedPackageFiles": [
     "/home/stefan/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/home/stefan/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/home/stefan/.nuget/packages/bcrypt.net-core/1.6.0/bcrypt.net-core.1.6.0.nupkg.sha512",
     "/home/stefan/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/stefan/.nuget/packages/microsoft.aspnetcore.openapi/7.0.1/microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
     "/home/stefan/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
