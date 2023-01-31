@@ -9,7 +9,6 @@ public interface IUserService
     public Task Create(AppUser newUser);
     public  Task<AppUser> BecomeWriter(Guid id);
     public List<AppUser> GetWriters();
-
-
+    public bool LikePost(Guid userId, Guid blogId);
 
 }

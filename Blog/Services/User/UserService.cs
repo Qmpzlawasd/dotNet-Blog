@@ -53,6 +53,21 @@ public class UserService : IUserService
         var writers =  _unitOfWork.AppUserRepository.GetWriters();
         return writers;
     }
-
+    public bool LikePost(Guid userId, Guid blogId)
+    {
+        var likke = new Like
+        {
+            UserId = userId,
+            BlogPostId = blogId
+        };
+        var post = _unitOfWork.BlogPostRepository.FindById(blogId);
+        if (post.Likes== null)
+        {
+            post.Likes= new List<Like>();
+        }
+        post.Likes.Add(likke);
+        _unitOfWork.SaveAsync();
+        return true;
+    }
 
 }

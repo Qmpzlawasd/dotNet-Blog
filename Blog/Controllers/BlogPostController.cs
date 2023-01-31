@@ -39,7 +39,7 @@ public class BlogPostController : Controller
     }
 
     [HttpPost("attachTag")]
-    public async Task<ActionResult<BlogPost>> AttachTag(Guid blogId, Guid categoryId)
+    public async Task<ActionResult> AttachTag(Guid blogId, Guid categoryId)
     {
         var good = _blogPostService.AttachTag(blogId, categoryId);
         if (!good)
@@ -66,6 +66,12 @@ public class BlogPostController : Controller
     {
         var tags =  _blogPostService.GetPostTags(postId);
         return tags;
+    }
+    [HttpGet("GetTopPostsByLikes")]
+    public async Task<ActionResult<BestBlogPostsDTO>> GetTopPostsByLikes()
+    {
+        var orderedPosts = _blogPostService.GetTopPostsByLikes();
+        return Ok(orderedPosts);
     }
 
 }

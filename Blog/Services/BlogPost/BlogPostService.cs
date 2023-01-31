@@ -62,4 +62,8 @@ public class BlogPostService : IBlogPostService
         var tags =  _unitOfWork.BlogPostRepository.GetTags(postId);
         return tags;
     }
+    public  List<BestBlogPostsDTO> GetTopPostsByLikes()
+    {
+        return  _unitOfWork.BlogPostRepository.GetTopPostsByLikes();
+    }
 }

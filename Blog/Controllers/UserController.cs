@@ -31,7 +31,7 @@ public class UserController : Controller
         return Ok(userObj);
     }
 
-    [HttpGet("becomeWriter")]
+    [HttpGet("BecomeWriter")]
     public async Task<IActionResult> BecomeWriter(Guid userId)
     {
         var writer = await _userService.BecomeWriter(userId);
@@ -46,4 +46,15 @@ public class UserController : Controller
         return Ok(writers);
     }
 
+    [HttpPost("LikePost")]
+    public async Task<ActionResult> LikePost(Guid userId, Guid blogId)
+    {
+        var good = _userService.LikePost(userId, blogId);
+        if (!good)
+        {
+            return BadRequest();
+        }
+
+        return Ok();
+    }
 }

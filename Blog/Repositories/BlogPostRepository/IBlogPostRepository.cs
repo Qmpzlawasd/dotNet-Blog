@@ -10,5 +10,6 @@ public interface IBlogPostRepository : IGenericRepository<BlogPost>
     public List<string> GetTags(Guid postId);
 
 
+    public List<BestBlogPostsDTO> GetTopPostsByLikes();
 
 }

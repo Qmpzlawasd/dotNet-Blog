@@ -11,5 +11,5 @@ public interface IBlogPostService
     public bool AttachTag(Guid blogId, Guid categoryId);
     public Task<bool> UpdateTitle(string title, BlogPostDTO post);
     public List<string> GetPostTags(Guid postId);
-
+    public List<BestBlogPostsDTO> GetTopPostsByLikes();
 }
