@@ -16,19 +16,6 @@ public class UserController : Controller
         _userService = userService;
     }
 
-    // [HttpGet("getUserData/{id}")]
-    // public async ActionResult<AppUserDTO> getUserData([FromRoute] Guid id)
-    // {
-    //     var outp = _userService.GetById(id);
-    //     var response = new UserResponseDTO
-    //     {
-    //         Username  = outp.
-    //         Email = outp.
-    //         Sex = outp.
-    //     };
-    //     return Ok(response);
-    // }
-
     [HttpPost("register")]
     public async Task<IActionResult> Create(AppUserDTO givenUser)
     {
@@ -43,4 +30,20 @@ public class UserController : Controller
 
         return Ok(userObj);
     }
+
+    [HttpGet("becomeWriter")]
+    public async Task<IActionResult> BecomeWriter(Guid userId)
+    {
+        var writer = await _userService.BecomeWriter(userId);
+        return Ok(writer);
+    }
+
+    [HttpGet("GetWriters")]
+    public async Task<ActionResult<AppUser>> GetWriters()
+    {
+        var writers = _userService.GetWriters();
+
+        return Ok(writers);
+    }
+
 }

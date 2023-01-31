@@ -61,7 +61,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public void Delete(TEntity entity)
     {
-        _table.Remove(entity);
+        entity.DateDeleted = DateTime.UtcNow;
     }
 
     public void DeleteRange(IEnumerable<TEntity> entities)

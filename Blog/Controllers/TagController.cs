@@ -1,3 +1,4 @@
+using Blog.Models;
 using Blog.Models.DTOs;
 using Blog.Services.Tag;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,12 @@ public class TagController : Controller
     [HttpPost("CreateCategory")]
     public async Task<IActionResult> CreateCategory(CategoryDTO givenData)
     {
-        
-        return Ok();
+        var newCategory = new Category
+        {
+            Name = givenData.Name,
+            Description = givenData.Description
+        };
+        await _tagService.CreateCategory(newCategory);
+        return Ok(newCategory);
     }
 }

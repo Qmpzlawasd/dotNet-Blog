@@ -36,10 +36,23 @@ public class UserService : IUserService
     {
         await _unitOfWork.AppUserRepository.CreateAsync(newUser);
         await _unitOfWork.SaveAsync();
+    }   
+    public async Task<AppUser> BecomeWriter(Guid id)
+    {
+         var user = _unitOfWork.AppUserRepository.FindById(id);
+         user.Writer = new Writer
+         {
+             UserId = user.Id,
+             BlogPostsWritten = 0
+         };
+         await _unitOfWork.SaveAsync();
+         return user;
     }
-    // err
-    // public async Task<AppUser> GetById(Guid id)
-    // {
-    //     return _userRepository.SelectUser(id);
-    // }
+    public List<AppUser> GetWriters()
+    {
+        var writers =  _unitOfWork.AppUserRepository.GetWriters();
+        return writers;
+    }
+
+
 }

@@ -9,7 +9,6 @@ public interface IGenericRepository<TEntity> where TEntity : BaseEntity
 
     //Create
 
-    Guid Create(TEntity entity);
     Task<Guid> CreateAsync(TEntity entity);
 
     void CreateRange(IEnumerable<TEntity> entities);

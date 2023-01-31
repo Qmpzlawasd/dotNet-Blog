@@ -1,4 +1,5 @@
 using Blog.Models;
+using Blog.Models.DTOs;
 using Blog.Services.BlogPost;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,38 +10,62 @@ namespace Blog.Controllers;
 public class BlogPostController : Controller
 {
     private readonly IBlogPostService _blogPostService;
+
     public BlogPostController(IBlogPostService blogPostService)
     {
         _blogPostService = blogPostService;
     }
 
-    [HttpGet("delete/{blogId}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid blogId)
+    [HttpDelete("delete/{id}")]
+    public async Task<ActionResult> DeleteBlogPost(Guid id)
     {
+        await _blogPostService.Delete(id);
         return Ok();
     }
-    // [HttpGet("getAll")]
-    // public async IAsyncEnumerable<BlogPost> GetAll()
-    // {
-    //     return _blogPostService.GetAll();
-    // }
-    [HttpGet("getBlogPostComments/{blogId}")]
-    public async Task<IActionResult> GetBlogPostComments([FromRoute] Guid blogId)
+
+    [HttpPost("makePost")]
+    public async Task<ActionResult<BlogPost>> CreatePost(BlogPostDTO newPost)
     {
-        // select  * from comm where id  = blogId;
-        // var a  = 
+        var postToCreate = new BlogPost
+        {
+            Title = newPost.Title,
+            Text = newPost.Text,
+            Language = newPost.Language,
+            WriterId = newPost.Writer_id
+        };
+        await _blogPostService.CreatePost(postToCreate);
+
+        return Ok(postToCreate);
+    }
+
+    [HttpPost("attachTag")]
+    public async Task<ActionResult<BlogPost>> AttachTag(Guid blogId, Guid categoryId)
+    {
+        var good = _blogPostService.AttachTag(blogId, categoryId);
+        if (!good)
+        {
+            return BadRequest();
+        }
+
         return Ok();
     }
-    [HttpPost("AddComment/{blogId}")]
-    public async Task<IActionResult> AddComment([FromRoute] Guid blogId)
+
+    [HttpPut("newTitle")]
+    public async Task<ActionResult> UpdateTitle(string newTitle, BlogPostDTO post)
     {
+        var back = await _blogPostService.UpdateTitle(newTitle, post);
+        if (!back)
+        {
+            return BadRequest();
+        }
+
         return Ok();
     }
-    
-    [HttpPost("getBlogPostRecentComments/{blogId}")]
-    public async Task<IActionResult> GetBlogPostRecentComments([FromRoute] Guid blogId)
+    [HttpGet("GetTags")]
+    public async Task<ActionResult<List<string>>> GetPostTags(Guid postId)
     {
-        //select   * from  (select  * from comm where id  = blogId order by dateCreated) where rownum < 3; 
-        return Ok();
+        var tags =  _blogPostService.GetPostTags(postId);
+        return tags;
     }
+
 }

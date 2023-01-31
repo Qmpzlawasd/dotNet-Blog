@@ -5,5 +5,9 @@ namespace Blog.Repositories.AppUserRepository;
 
 public interface IAppUserRepository : IGenericRepository<AppUser>
 {
-    public AppUser FindByUsername(string name);
+    public AppUser? FindByUsername(string name);
+    public List<AppUser> GetWriters();
+
+
+
 }
