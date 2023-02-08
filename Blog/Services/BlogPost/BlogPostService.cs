@@ -62,4 +62,8 @@ public class BlogPostService : IBlogPostService
     {
         return  _unitOfWork.BlogPostRepository.GetTopPostsByLikes();
     }
+    public async Task<Models.BlogPost?> GetByIdAsync(Guid id)
+    {
+        return await _unitOfWork.BlogPostRepository.FindByIdAsync(id);
+    }
 }

@@ -20,7 +20,7 @@ public class BlogPostController : Controller
 
     [Authorization(Role.Admin)]
     [HttpDelete("delete/{id}")]
-    public async Task<ActionResult> DeleteBlogPost(Guid id)
+    public async Task<ActionResult> DeleteBlogPost([FromRoute] Guid id)
     {
         await _blogPostService.Delete(id);
 
@@ -78,5 +78,19 @@ public class BlogPostController : Controller
     {
         var orderedPosts = _blogPostService.GetTopPostsByLikes();
         return Ok(orderedPosts);
+    }
+
+    [HttpGet("GetPostById/{id}")]
+    public async Task<BlogPostDTO> GetPostById([FromRoute]Guid id)
+    {
+        var post = await _blogPostService.GetByIdAsync(id);
+        var a = new BlogPostDTO
+        {
+            Language = post.Language,
+            Text = post.Text,
+            Writer_id = post.WriterId,
+            Title = post.Title
+        };
+        return a;
     }
 }

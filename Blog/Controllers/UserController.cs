@@ -32,6 +32,7 @@ public class UserController : Controller
 
         return Ok(userObj);
     }
+
     [Authorization(Role.Admin)]
     [HttpGet("BecomeWriter")]
     public async Task<IActionResult> BecomeWriter(Guid userId)
@@ -68,6 +69,20 @@ public class UserController : Controller
         {
             return BadRequest("invalid username or password");
         }
+
         return Ok(response);
+    }
+
+    [HttpGet("info/{id}")]
+    public async Task<UserDataDTO> GetInfo([FromRoute] Guid id)
+    {
+        var a = await _userService.GetByIdAsync(id);
+        var b = new UserDataDTO
+        {
+            Email = a.Email,
+            Sex = a.Sex,
+            Username = a.Username
+        };
+        return b;
     }
 }

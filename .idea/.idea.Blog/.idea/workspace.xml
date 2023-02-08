@@ -6,32 +6,56 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Blog/Helper/Authorization.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/Helper/Middleware/JwtMiddleware.cs" afterDir="false" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="add auth">
+      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/UserDataDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/core/services/api.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/core/services/appuser.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/core/services/blogpost.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/core/services/category.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/data/AppUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/data/BlogPost.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/data/Category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/data/TopBlogPost.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/blogpost/blogpost.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/blogpost/blogpost.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/blogpost/blogpost.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/blogpost/blogpost.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/profile/profile.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/profile/profile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/profile/profile.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/src/app/pages/profile/profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Enums/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Enums/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Models/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/AppUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/BlogPostRepositoy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/BlogPostRepositoy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/refint/Blog.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +77,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85444b87515266794f71448c4f4bd6c1bde1cbd93fe1721b9221ae0dd4ebc93/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de449bf1d030cdafcfe5e0dcd865573dbc103861f920f39d99a4dc848fb4fb0/ManualResetEventSlim.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Frontend/src/app/core/services/api.service.ts" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,7 +103,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;idea.background.editor&quot;: &quot;/home/stefan/Pictures/sabia.jpg,0,scale,center&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/stefan/JetBrains Rider-2022.3.1/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -187,7 +215,15 @@
       <workItem from="1675148318021" duration="13151000" />
       <workItem from="1675162674239" duration="3681000" />
       <workItem from="1675267313873" duration="4490000" />
-      <workItem from="1675843962999" duration="2915000" />
+      <workItem from="1675843962999" duration="4958000" />
+      <workItem from="1675860081076" duration="1215000" />
+      <workItem from="1675861312601" duration="998000" />
+      <workItem from="1675863170886" duration="797000" />
+      <workItem from="1675864124609" duration="3450000" />
+      <workItem from="1675867819570" duration="2599000" />
+      <workItem from="1675870466141" duration="177000" />
+      <workItem from="1675870707581" duration="4377000" />
+      <workItem from="1675876495280" duration="3444000" />
     </task>
     <task id="LOCAL-00001" summary="done database">
       <created>1673719751130</created>
@@ -231,8 +267,18 @@
       <option name="project" value="LOCAL" />
       <updated>1675166392078</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add auth">
+      <created>1675847139837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675847139837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -253,10 +299,10 @@
     <MESSAGE value="done database" />
     <MESSAGE value="make final database, hopefully" />
     <MESSAGE value="implement repo and service" />
-    <MESSAGE value="add auth" />
     <MESSAGE value="add linq queries" />
     <MESSAGE value="do all linq methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="do all linq methods" />
+    <MESSAGE value="add auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="add auth" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

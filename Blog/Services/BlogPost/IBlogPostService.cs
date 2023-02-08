@@ -1,4 +1,3 @@
-
 using Blog.Models.DTOs;
 
 namespace Blog.Services.BlogPost;
@@ -12,4 +11,5 @@ public interface IBlogPostService
     public Task<bool> UpdateTitle(string title, BlogPostDTO post);
     public List<string> GetPostTags(Guid postId);
     public List<BestBlogPostsDTO> GetTopPostsByLikes();
+    public Task<Models.BlogPost?> GetByIdAsync(Guid id);
 }
