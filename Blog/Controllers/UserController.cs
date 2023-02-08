@@ -1,3 +1,5 @@
+using Blog.Enums;
+using Blog.Helper;
 using Blog.Models;
 using Blog.Models.DTOs;
 using Blog.Services.User;
@@ -30,7 +32,7 @@ public class UserController : Controller
 
         return Ok(userObj);
     }
-
+    [Authorization(Role.Admin)]
     [HttpGet("BecomeWriter")]
     public async Task<IActionResult> BecomeWriter(Guid userId)
     {
@@ -39,7 +41,7 @@ public class UserController : Controller
     }
 
     [HttpGet("GetWriters")]
-    public async Task<ActionResult<AppUser>> GetWriters()
+    public ActionResult<AppUser> GetWriters()
     {
         var writers = _userService.GetWriters();
 
@@ -47,7 +49,7 @@ public class UserController : Controller
     }
 
     [HttpPost("LikePost")]
-    public async Task<ActionResult> LikePost(Guid userId, Guid blogId)
+    public ActionResult LikePost(Guid userId, Guid blogId)
     {
         var good = _userService.LikePost(userId, blogId);
         if (!good)
@@ -56,5 +58,16 @@ public class UserController : Controller
         }
 
         return Ok();
+    }
+
+    [HttpPost("authenticate")]
+    public IActionResult Authenticate(AppUserRequestDTO user)
+    {
+        var response = _userService.Authenticate(user);
+        if (response == null)
+        {
+            return BadRequest("invalid username or password");
+        }
+        return Ok(response);
     }
 }

@@ -30,8 +30,7 @@ public class BlogPostRepositoy : GenericRepository<BlogPost>, IBlogPostRepositor
             group like by like.BlogPostId
             into g
             select new BestBlogPostsDTO { Id = g.Key, Likes = g.Count() };
-        var list = query.ToList();
-        list.Sort((a, b) => a.Likes.CompareTo(b.Likes));
+        var list = query.OrderBy(x => x.Likes).ToList();
         return list;
     }
 }

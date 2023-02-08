@@ -58,10 +58,10 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
     }
 
     //Delete
-
     public void Delete(TEntity entity)
     {
         entity.DateDeleted = DateTime.UtcNow;
+        Save();
     }
 
     public void DeleteRange(IEnumerable<TEntity> entities)

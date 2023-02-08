@@ -6,20 +6,23 @@
     <projectFile profileName="https">Blog/Blog.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="add linq queries">
-      <change afterPath="$PROJECT_DIR$/Blog/Models/DTOs/BestBlogPostsDTO.cs" afterDir="false" />
+    <list default="true" id="8d95cff0-5eab-4219-afc3-04bb9947c38f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/Authorization.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/Helper/Middleware/JwtMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/BlogPostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/TagController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Enums/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Enums/Role.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Models/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Models/AppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/BlogPostRepositoy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/BlogPostRepositoy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/IBlogPostRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/BlogPostRepository/IBlogPostRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Repositories/GenericRepository/GenericRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/BlogPostService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/BlogPost/IBlogPostService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/IUserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/Services/User/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/bin/Debug/net7.0/Blog.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/Blog.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/obj/Debug/net7.0/ref/Blog.dll" afterDir="false" />
@@ -182,7 +185,9 @@
       <workItem from="1675089721862" duration="8682000" />
       <workItem from="1675099769615" duration="1473000" />
       <workItem from="1675148318021" duration="13151000" />
-      <workItem from="1675162674239" duration="3404000" />
+      <workItem from="1675162674239" duration="3681000" />
+      <workItem from="1675267313873" duration="4490000" />
+      <workItem from="1675843962999" duration="2915000" />
     </task>
     <task id="LOCAL-00001" summary="done database">
       <created>1673719751130</created>
@@ -219,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675155371607</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="do all linq methods">
+      <created>1675166392078</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675166392078</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -243,7 +255,8 @@
     <MESSAGE value="implement repo and service" />
     <MESSAGE value="add auth" />
     <MESSAGE value="add linq queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="add linq queries" />
+    <MESSAGE value="do all linq methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="do all linq methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,3 +1,5 @@
+using Blog.Enums;
+using Blog.Helper;
 using Blog.Models;
 using Blog.Models.DTOs;
 using Blog.Services.BlogPost;
@@ -16,10 +18,12 @@ public class BlogPostController : Controller
         _blogPostService = blogPostService;
     }
 
+    [Authorization(Role.Admin)]
     [HttpDelete("delete/{id}")]
     public async Task<ActionResult> DeleteBlogPost(Guid id)
     {
         await _blogPostService.Delete(id);
+
         return Ok();
     }
 
@@ -61,17 +65,18 @@ public class BlogPostController : Controller
 
         return Ok();
     }
+
     [HttpGet("GetTags")]
-    public async Task<ActionResult<List<string>>> GetPostTags(Guid postId)
+    public ActionResult<List<string>> GetPostTags(Guid postId)
     {
-        var tags =  _blogPostService.GetPostTags(postId);
+        var tags = _blogPostService.GetPostTags(postId);
         return tags;
     }
+
     [HttpGet("GetTopPostsByLikes")]
-    public async Task<ActionResult<BestBlogPostsDTO>> GetTopPostsByLikes()
+    public ActionResult<BestBlogPostsDTO> GetTopPostsByLikes()
     {
         var orderedPosts = _blogPostService.GetTopPostsByLikes();
         return Ok(orderedPosts);
     }
-
 }

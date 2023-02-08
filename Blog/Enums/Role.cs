@@ -1,4 +1,4 @@
-namespace Backend.Enums
+namespace Blog.Enums
 {
     public enum Role
     {

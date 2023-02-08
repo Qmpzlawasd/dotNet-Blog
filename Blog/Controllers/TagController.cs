@@ -1,3 +1,5 @@
+using Blog.Enums;
+using Blog.Helper;
 using Blog.Models;
 using Blog.Models.DTOs;
 using Blog.Services.Tag;
@@ -15,8 +17,8 @@ public class TagController : Controller
     {
         _tagService = tagService;
     }
-
     [HttpPost("CreateCategory")]
+    [Authorization(Role.Admin)]
     public async Task<IActionResult> CreateCategory(CategoryDTO givenData)
     {
         var newCategory = new Category

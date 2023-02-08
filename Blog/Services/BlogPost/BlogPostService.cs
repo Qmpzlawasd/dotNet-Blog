@@ -6,12 +6,10 @@ namespace Blog.Services.BlogPost;
 public class BlogPostService : IBlogPostService
 {
     private IUnitOfWork _unitOfWork;
-
     public BlogPostService(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
     }
-
     // public Task<IAsyncEnumerable<string>> GetBlogPostComments(Guid blogId)
     // {
     //     return _unitOfWork.BlogPostRepository.GetComments(blogId);
@@ -22,13 +20,11 @@ public class BlogPostService : IBlogPostService
         _unitOfWork.BlogPostRepository.Delete(post);
         await _unitOfWork.SaveAsync();
     }
-
     public async Task CreatePost(Models.BlogPost post)
     {
         await _unitOfWork.BlogPostRepository.CreateAsync(post);
         await _unitOfWork.SaveAsync();
     }
-
     public bool AttachTag(Guid blogId, Guid categoryId)
     {
         var post = _unitOfWork.BlogPostRepository.FindById(blogId);

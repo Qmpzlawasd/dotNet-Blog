@@ -16,7 +16,7 @@ public class UserService : IUserService
         _jwtUtils = jwtUtils;
     }
 
-    public AppUserResponseDTO Authenticate(AppUserRequestDTO model)
+    public AppUserResponseDTO? Authenticate(AppUserRequestDTO model)
     {
         var user = _unitOfWork.AppUserRepository.FindByUsername(model.Username);
         if (user == null  || !BCrypt.Net.BCrypt.Verify(model.Password,user.Password))
@@ -69,5 +69,8 @@ public class UserService : IUserService
         _unitOfWork.SaveAsync();
         return true;
     }
-
+    public async Task<AppUser?> GetByIdAsync(Guid id)
+    {
+        return await _unitOfWork.AppUserRepository.FindByIdAsync(id);
+    }
 }

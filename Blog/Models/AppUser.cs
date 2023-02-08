@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Blog.Enums;
 using Blog.Models.Base;
 
 namespace Blog.Models;
@@ -13,7 +14,7 @@ public class AppUser : BaseEntity
 
     public bool IsAdmin{ get; set; }
     public string? Sex { get; set; }
-    
+    public Role Role { get; set; }    
     public virtual Writer? Writer{ get; set; }
     public virtual ICollection<Comment>? Comments { get; set; }
     public virtual ICollection<Like>? Likes { get; set; }
